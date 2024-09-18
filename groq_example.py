@@ -30,4 +30,9 @@ def ask_chatgpt(question: str):
 question = "How much did I sell yesterday?"
 answer   = ask_chatgpt(question)
 
+ai_answer = ("I'm just an AI, I don't have any information about your sales or any other "
+ "personal data. I'm here to provide general information and answer questions "
+ "based on what I know, but I don't have access to your personal data or "
+ 'financial information.')
+
 pprint(answer)
