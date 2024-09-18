@@ -25,7 +25,7 @@ def ask_chatgpt(question: str):
         model="llama3-8b-8192",
     )
 
-    return chat_completion
+    return (chat_completion.choices[0].message.content)
 
 question = "How much did I sell yesterday?"
 answer   = ask_chatgpt(question)
