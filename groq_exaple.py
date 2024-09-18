@@ -1,5 +1,6 @@
 import os
 from groq import Groq
+from pprint import pprint
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -29,4 +30,4 @@ def ask_chatgpt(question: str):
 question = "How much did I sell yesterday?"
 answer   = ask_chatgpt(question)
 
-print(answer)
+pprint(answer)
