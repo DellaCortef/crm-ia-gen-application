@@ -1,5 +1,6 @@
 import os
 import openai
+from pprint import pprint
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -28,4 +29,4 @@ question = "How much did I sell yesterday?"
 answer = ask_chatgpt(question )
 
 # Print the response
-print(f"ChatGPT response: {answer}")
+pprint(f"ChatGPT response: {answer}")
