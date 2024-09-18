@@ -1,3 +1,5 @@
+-- https://www.youtube.com/watch?v=CdD-atX17LY
+
 -- after commited .env to Github, we updated our .gitignore
     - we can run the code below to remove our .env:
 TERMINALi. git rm -r --cached .
