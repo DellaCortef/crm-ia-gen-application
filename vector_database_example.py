@@ -18,3 +18,10 @@ collection.add(
     ],
     ids=["country1", "country2", "country3", "country4", "country5", "country6", "country7", "country8"]
 )
+
+result = collection.query(
+    query_texts=["Does the CRM have expansion to Tokyo?"],
+    n_results=3
+)
+
+print(result)
