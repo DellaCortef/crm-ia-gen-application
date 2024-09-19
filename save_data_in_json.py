@@ -19,10 +19,10 @@ def connect_to_postgre():
     print(conn)
     return conn
 
-# Function to load data from gold_sales_by_seller
-def load_data_gold_sales_by_seller():
+# Function to load data from gold_sales_by_product
+def load_data_gold_sales_by_product():
     conn = connect_to_postgre()
-    query = "SELECT * FROM gold_sales_by_seller;"
+    query = "SELECT * FROM gold_sales_by_product;"
     with conn.cursor() as cursor:
         cursor.execute(query)
         data = cursor.fetchall()
