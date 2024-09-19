@@ -36,8 +36,8 @@ def ask_groq(question, data_json):
 
     # Send the question and data to Groq
     chat_completion = client.chat.completions.create(
-        messages=[{"role", "user", "content": str(content)}],
-        model="llama3-8b-8192"
+        messages=[{"role": "user", "content": str(content)}],
+        model="llama3-8b-8192"  # Certifique-se de escolher o modelo correto
     )
     
     # Extracting the content of the response
