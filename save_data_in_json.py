@@ -63,3 +63,5 @@ if __name__ == "__main__":
 
     sales_data_by_product = load_data_gold_sales_by_product()
     save_in_json(sales_data_by_product, "gold_sales_by_product.json")
+
+    print("Data saved in 'gold_vendas_por_vendedor.json' and 'gold_vendas_por_produto.json'.")
