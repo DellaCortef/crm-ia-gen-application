@@ -19,3 +19,14 @@ def connect_to_postgre():
     print(conn)
     return conn
 
+# Function to load data from gold_sales_by_seller
+def load_data_gold_sales_by_seller():
+    conn = connect_to_postgre()
+    query = "SELECT * FROM gold_sales_by_seller;"
+    with conn.cursor() as cursor:
+        cursor.execute(query)
+        data = cursor.fetchall()
+        columns = [desc[0] for desc in cursor.description]
+    data_dict = [dict(zip(columns, row)) for row in data]
+    conn.close
+    return data_dict
