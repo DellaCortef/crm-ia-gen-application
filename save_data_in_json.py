@@ -55,3 +55,11 @@ def custom_serializer(obj):
 def save_in_json(data, file_path):
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=4, default=custom_serializer)
+
+# Main execution: read data and save into JSON files
+if __name__ == "__main__":
+    sales_data_by_seller = load_data_gold_sales_by_seller()
+    save_in_json(sales_data_by_seller, "gold_sales_by_seller.json")
+
+    sales_data_by_product = load_data_gold_sales_by_product()
+    save_in_json(sales_data_by_product, "gold_sales_by_product.json")
