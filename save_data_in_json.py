@@ -46,7 +46,7 @@ def load_data_gold_sales_by_seller():
 # Custom serializer for non-serializable types
 def custom_serializer(obj):
     if isinstance(obj, (datetime, date)):
-        retunr obj.isoformat()
+        return obj.isoformat()
     elif isinstance(obj, Decimal):
         return float(obj)
     raise TypeError(f"Type {type(obj)} is not serializable")
