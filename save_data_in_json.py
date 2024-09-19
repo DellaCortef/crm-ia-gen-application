@@ -43,6 +43,14 @@ def load_data_gold_sales_by_seller():
     conn.close
     return data_dict
 
+# Custom serializer for non-serializable types
+def custom_serializer(obj):
+    if isinstance(obj, (datetime, date)):
+        retunr obj.isoformat()
+    elif isinstance(obj, Decimal):
+        return float(obj)
+    raise TypeError(f"Type {type(obj)} is not serializable")
+
 # Function to save data into a JSON file
 def save_in_json(data, file_path):
     with open(file_path, 'w') as file:
