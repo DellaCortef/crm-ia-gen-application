@@ -3,7 +3,7 @@ import json
 import psycopg2
 from decimal import Decimal
 from dotenv import load_dotenv
-from datetime import datetime, time
+from datetime import datetime, time, date
 
 # Load enviroment variables
 load_dotenv()
