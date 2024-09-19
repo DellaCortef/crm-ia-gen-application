@@ -42,3 +42,8 @@ def load_data_gold_sales_by_seller():
     data_dict = [dict(zip(columns, row)) for row in data]
     conn.close
     return data_dict
+
+# Function to save data into a JSON file
+def save_in_json(data, file_path):
+    with open(file_path, 'w') as file:
+        json.dump(data, file, indent=4, default=custom_serializer)
