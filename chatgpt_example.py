@@ -3,6 +3,7 @@ import openai
 from pprint import pprint
 from dotenv import load_dotenv
 
+# Load environment variables
 load_dotenv()
 
 # Set your API key

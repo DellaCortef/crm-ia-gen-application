@@ -3,6 +3,7 @@ import pandas as pd
 from groq import Groq
 from dotenv import load_dotenv
 
+# Load environment variables
 load_dotenv()
 
 # Configure your API key as an environment variable
