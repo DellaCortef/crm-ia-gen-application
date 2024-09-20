@@ -10,4 +10,5 @@ load_dotenv()
 
 # API and Assistant ID configuration # asst_bWjV0p7J0MUiSt8nbl4TuMhG
 ASSISTANT_ID = "asst_bWjV0p7J0MUiSt8nbl4TuMhG"
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
