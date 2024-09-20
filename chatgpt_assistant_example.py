@@ -36,3 +36,9 @@ def answer_the_question(question):
         time.sleep(1)
 
     st.write(f"🏁 Run Completed!")
+
+    # Get the last message in the thread
+    message_response = client.beta.threads.messages.list(thread_id=thread.id)
+    messages = message_response.data
+
+    
