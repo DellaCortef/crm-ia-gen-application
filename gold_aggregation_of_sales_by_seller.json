@@ -1,0 +1,51 @@
+[
+    {
+        "seller": "felipe@gmail.com",
+        "date_day": "2024-09-01",
+        "total_sales": 1725.93,
+        "total_quantity": 2,
+        "total_transactions": 1
+    },
+    {
+        "seller": "igor@hotmail.com",
+        "date_day": "2024-09-01",
+        "total_sales": 400.23,
+        "total_quantity": 1,
+        "total_transactions": 1
+    },
+    {
+        "seller": "celso@gmail.com",
+        "date_day": "2024-09-02",
+        "total_sales": 4573.09,
+        "total_quantity": 5,
+        "total_transactions": 1
+    },
+    {
+        "seller": "aline@yumi.com",
+        "date_day": "2024-09-04",
+        "total_sales": 234.28,
+        "total_quantity": 1,
+        "total_transactions": 1
+    },
+    {
+        "seller": "juliano@jonadadados.com",
+        "date_day": "2024-09-04",
+        "total_sales": 1233.02,
+        "total_quantity": 4,
+        "total_transactions": 1
+    },
+    {
+        "seller": "test@hotmail.com",
+        "date_day": "2024-09-07",
+        "total_sales": 234.0,
+        "total_quantity": 1,
+        "total_transactions": 1
+    },
+    {
+        "seller": "igor@mail.com",
+        "date_day": "2024-09-11",
+        "total_sales": 123.98,
+        "total_quantity": 1,
+        "total_transactions": 1
+    }
+]
