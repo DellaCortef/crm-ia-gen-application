@@ -19,7 +19,7 @@ def answer_the_question(question):
         messages=[
             {
                 "role": "user",
-                "content": f"today is the day {datetime.now() {question}}",  # User question is sent directly
+                "content": f"today is the day {datetime.now()} {question}",  # User question is sent directly
             }
         ]
     )
