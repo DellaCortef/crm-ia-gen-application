@@ -21,3 +21,11 @@ def create_assistant_with_file_search():
     print(f"Wizard created with ID: {assistant}")
     return assistant
 
+# Create a Vector Store to store files
+def create_vector_store():
+    vector_store = client.beta.vector_stores.create(
+        name="Sales Data Store"
+    )
+
+    print(f"Vector Store created with ID: {vector_store.id}")
+    return vector_store
