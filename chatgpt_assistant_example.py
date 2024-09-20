@@ -45,3 +45,13 @@ def answer_the_question(question):
     latest_message = messages[0]
     return latest_message.content[0].text.value.strip()
 
+# Streamlit Interface
+st.title("Customer Service Agent - Ask the Assistant")
+
+# Inbox for questions
+question = st.text_input("Input your question:")
+
+# When a question is asked, send it to the assistant and display the answer
+if question:
+    answer = answer_the_question(question)
+    st.write(f"💬 Answer: {answer}")
