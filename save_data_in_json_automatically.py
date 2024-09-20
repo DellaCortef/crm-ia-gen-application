@@ -54,7 +54,7 @@ def upload_files_to_vector_store(vector_store, file_paths):
 # Update the wizard to use Vector Store
 def update_assistant_with_vector_store(assistant, vector_store):
     client.beta.assistants.update(
-        assistant_id=assistant_id,
+        assistant_id=assistant.id,
         tool_resources={"file_search": {vector_store_ids: [vector_store_id]}},
     )
 
