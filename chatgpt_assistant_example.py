@@ -15,6 +15,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # Function to send the question to the assistant and get the answer
 def answer_the_question(question):
     # Create a new thread with the user's message
+    
     thread = client.beta.threads.create(
         messages=[
             {
