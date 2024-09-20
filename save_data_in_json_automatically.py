@@ -29,3 +29,25 @@ def create_vector_store():
 
     print(f"Vector Store created with ID: {vector_store.id}")
     return vector_store
+
+# Upload JSON files to Vector Store and wait for processing
+def upload_files_to_vector_store(vector_store, file_paths):
+    file_streams = []
+    for file_path in file_paths:
+        try:
+            with open(file_path, "rb") as file:
+                file_streams.append(file)
+            print(f"File {file_path} prepared for upload.")
+        except FileNotFoundError:
+            print(f"File {file_path} not found.")
+
+    if file_streams:
+        file_batch = client.beta.vector_stores.file_batches.upload_and_poll(
+            vector_store_id=vector_store_id, files=file_streams
+        )
+
+        print(f"Upload status: {file_batch.status}")
+        print(f"File count: {file_batch.file_counts}")
+    else:
+        print("No files have been prepared for upload.")
+
