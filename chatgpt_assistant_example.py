@@ -41,4 +41,7 @@ def answer_the_question(question):
     message_response = client.beta.threads.messages.list(thread_id=thread.id)
     messages = message_response.data
 
-    
+    # Extract and return the most recent response
+    latest_message = messages[0]
+    return latest_message.content[0].text.value.strip()
+
