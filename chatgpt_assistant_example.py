@@ -28,3 +28,11 @@ def answer_the_question(question):
 # Send the thread to the wizard (as a new execution)
 run = client.beta.threads.runs.create(thread_id=thread.id, assistant_id=ASSISTANT_ID)
 st.write(f"Conversation ID: {run.id}")
+
+# Wait for execution to complete
+while run.status != "completed":
+    run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+    st.write(f"🏃 Run Status: {run.status}")
+    time.sleep(1)
+
+st.write(f"🏁 Run Completed!")
