@@ -24,3 +24,6 @@ def answer_the_question(question):
         ]
     )
 
+# Send the thread to the wizard (as a new execution)
+run = client.beta.threads.runs.create(thread_id=thread.id, assistant_id=ASSISTANT_ID)
+st.write(f"Conversation ID: {run.id}")
