@@ -63,3 +63,13 @@ def update_assistant_with_vector_store(assistant, vector_store):
 # Create the wizard with file_search enabled
 assistant = create_assistant_with_file_search()
 
+# Create a Vector Store and upload JSON files
+vector_store = create_vector_store()
+upload_files_to_vector_store(vector_store, [
+    "gold_aggregation_of_sales_by_seller.json",
+    "gold_last_seven_days.json",
+    """
+    "gold_sales_by_product.json",
+    "gold_sales_by_seller.json"
+    """
+])
