@@ -43,7 +43,7 @@ def upload_files_to_vector_store(vector_store, file_paths):
 
     if file_streams:
         file_batch = client.beta.vector_stores.file_batches.upload_and_poll(
-            vector_store_id=vector_store_id, files=file_streams
+            vector_store_id=vector_store.id, files=file_streams
         )
 
         print(f"Upload status: {file_batch.status}")
