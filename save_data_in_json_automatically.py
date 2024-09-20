@@ -73,3 +73,6 @@ upload_files_to_vector_store(vector_store, [
     "gold_sales_by_seller.json"
     """
 ])
+
+# Update the wizard with the created Vector Store
+update_assistant_with_vector_store(assistant, vector_store)
