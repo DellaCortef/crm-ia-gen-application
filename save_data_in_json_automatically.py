@@ -60,3 +60,6 @@ def update_assistant_with_vector_store(assistant, vector_store):
 
     print("Updated wizard for using Vector Store.")
 
+# Create the wizard with file_search enabled
+assistant = create_assistant_with_file_search()
+
